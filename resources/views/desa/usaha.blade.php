@@ -4,71 +4,25 @@
 
 @include('layouts.header')
 
-<body class="index-page">
+<body class="services-page">
 
-  @include('layouts.navbar')
+@include('layouts.navbar')
 
   <main class="main">
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background">
+    <!-- Page Title -->
+    <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/page-title-bg.webp);">
+      <div class="container position-relative">
+        <h1>Usaha Lokal</h1>
 
-      <div id="hero-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
-
-        <div class="carousel-item active">
-          <img src="assets/img/hero_1.jpg" alt="">
-          <div class="carousel-container">
-            <h2>Jelajahi Desa Wisata Indonesia</h2>
-            <p>Temukan keindahan, tradisi, dan potensi lokal yang menakjubkan di seluruh pelosok negeri.</p>
-            <a href="desa-wisata.html" class="btn btn-green">Mulai Eksplorasi</a>
-          </div>
-        </div><!-- End Carousel Item -->
-
-        <div class="carousel-item">
-          <img src="assets/img/hero_2.jpg" alt="">
-          <div class="carousel-container">
-            <h2>Keindahan Desa, Kekayaan Nusantara</h2>
-            <p>Jelajahi tempat-tempat unik dan memukau di desa wisata Indonesia yang kaya akan budaya dan tradisi.</p>
-          </div>
-        </div><!-- End Carousel Item -->
-
-        <div class="carousel-item">
-          <img src="assets/img/hero_3.jpg" alt="">
-          <div class="carousel-container">
-            <h2>Dukung Usaha Lokal, Bangkitkan Ekonomi Desa</h2>
-            <p>Temukan produk kerajinan, kuliner khas, dan layanan lokal yang mengangkat potensi desa.</p>
-          </div>
-        </div><!-- End Carousel Item -->
-
-        <div class="carousel-item">
-          <img src="assets/img/hero_4.jpg" alt="">
-          <div class="carousel-container">
-            <h2>Event Desa yang Menginspirasi</h2>
-            <p>Ikuti berbagai acara tradisional dan festival yang menggambarkan keragaman budaya nusantara.</p>
-          </div>
-        </div><!-- End Carousel Item -->
-
-        <div class="carousel-item">
-          <img src="assets/img/hero_5.jpg" alt="">
-          <div class="carousel-container">
-            <h2>Pesan Homestay, Nikmati Ketenangan Desa</h2>
-            <p>Rasakan keramahan lokal dengan menginap di homestay berkualitas di desa wisata.</p>
-          </div>
-        </div><!-- End Carousel Item -->
-
-        <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
-        </a>
-
-        <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
-          <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
-        </a>
-
-        <ol class="carousel-indicators"></ol>
-
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="{{ url('/') }}">Beranda</a></li>
+            <li class="current">Usaha Lokal</li>
+          </ol>
+        </nav>
       </div>
-
-    </section><!-- /Hero Section -->
+    </div><!-- End Page Title -->
 
     <!-- Services Section -->
     <section id="services" class="services section">
@@ -93,9 +47,10 @@
                   </svg>
                 </div>
                 <div class="service-item-content">
-                  <h3 class="service-heading">Rekomendasi Desa Wisata</h3>
+                  <h3 class="service-heading">Planting</h3>
                   <p>
-                    Temukan desa wisata terbaik dengan rekomendasi yang sesuai minat Anda.
+                    Gravida sodales condimentum pellen tesq accumsan orci quam
+                    sagittis sapie
                   </p>
                 </div>
               </div>
@@ -113,9 +68,10 @@
                   </svg>
                 </div>
                 <div class="service-item-content">
-                  <h3 class="service-heading">Informasi Usaha Lokal</h3>
+                  <h3 class="service-heading">Mulching</h3>
                   <p>
-                    Kenali produk khas dan usaha kreatif yang mendukung ekonomi desa.
+                    Gravida sodales condimentum pellen tesq accumsan orci quam
+                    sagittis sapie
                   </p>
                 </div>
               </div>
@@ -133,9 +89,10 @@
                   </svg>
                 </div>
                 <div class="service-item-content">
-                  <h3 class="service-heading">Pemesanan Tempat Wisata</h3>
+                  <h3 class="service-heading">Plowing</h3>
                   <p>
-                    Pesan tempat wisata favorit Anda dengan mudah langsung dari platform kami.
+                    Gravida sodales condimentum pellen tesq accumsan orci quam
+                    sagittis sapie
                   </p>
                 </div>
               </div>
@@ -151,9 +108,10 @@
                   </svg>
                 </div>
                 <div class="service-item-content">
-                  <h3 class="service-heading">Event Desa Wisata</h3>
+                  <h3 class="service-heading">Mowing</h3>
                   <p>
-                    Ikuti event budaya dan festival yang meriah di desa wisata.
+                    Gravida sodales condimentum pellen tesq accumsan orci quam
+                    sagittis sapie
                   </p>
                 </div>
               </div>
@@ -171,9 +129,10 @@
                   </svg>
                 </div>
                 <div class="service-item-content">
-                  <h3 class="service-heading">Jelajah Kuliner Khas Desa</h3>
+                  <h3 class="service-heading">Seeding</h3>
                   <p>
-                    Cicipi kelezatan kuliner khas desa yang menggoda selera.
+                    Gravida sodales condimentum pellen tesq accumsan orci quam
+                    sagittis sapie
                   </p>
                 </div>
               </div>
@@ -190,9 +149,10 @@
                   </svg>
                 </div>
                 <div class="service-item-content">
-                  <h3 class="service-heading">Informasi Homestay</h3>
+                  <h3 class="service-heading">Fresh Vegetables</h3>
                   <p>
-                    Temukan tempat menginap nyaman dengan nuansa lokal desa.
+                    Gravida sodales condimentum pellen tesq accumsan orci quam
+                    sagittis sapie
                   </p>
                 </div>
               </div>
@@ -209,9 +169,10 @@
                   </svg>
                 </div>
                 <div class="service-item-content">
-                  <h3 class="service-heading">Layanan Pendukung</h3>
+                  <h3 class="service-heading">Watering</h3>
                   <p>
-                    Akses informasi transportasi, pemandu wisata, dan layanan pendukung lainnya.
+                    Gravida sodales condimentum pellen tesq accumsan orci quam
+                    sagittis sapie
                   </p>
                 </div>
               </div>
@@ -228,9 +189,10 @@
                   </svg>
                 </div>
                 <div class="service-item-content">
-                  <h3 class="service-heading">Galeri Multimedia Desa</h3>
+                  <h3 class="service-heading">Vegetable selling</h3>
                   <p>
-                    Lihat foto dan video desa wisata yang memukau untuk inspirasi perjalanan Anda.
+                    Gravida sodales condimentum pellen tesq accumsan orci quam
+                    sagittis sapie
                   </p>
                 </div>
               </div>
@@ -242,41 +204,44 @@
 
     <!-- About Section -->
     <section id="about" class="about section">
+
       <div class="content">
         <div class="container">
           <div class="row">
             <div class="col-lg-6 mb-4 mb-lg-0">
-              <img src="assets/img/img_long_5.jpg" alt="Image" class="img-fluid img-overlap" data-aos="zoom-out">
+              <img src="assets/img/img_long_5.jpg" alt="Image " class="img-fluid img-overlap" data-aos="zoom-out">
             </div>
             <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
-              <h3 class="content-subtitle text-white opacity-50">Mengapa Memilih Kami</h3>
+              <h3 class="content-subtitle text-white opacity-50">Why Choose Us</h3>
               <h2 class="content-title mb-4">
-                Membawa <strong>Keajaiban Desa</strong> ke Jangkauan Anda
+                More than <strong>50 year experience</strong> in agriculture
+                industry
               </h2>
               <p class="opacity-50">
-                JejakDesa hadir untuk memperkenalkan keindahan dan potensi desa-desa wisata di Indonesia. Dengan misi memberdayakan masyarakat lokal dan memperkuat perekonomian desa, kami menjadi jembatan bagi wisatawan untuk merasakan pengalaman autentik di setiap sudut desa.
+                Reprehenderit, odio laboriosam? Blanditiis quae ullam quasi illum
+                minima nostrum perspiciatis error consequatur sit nulla.
               </p>
-    
+
               <div class="row my-5">
                 <div class="col-lg-12 d-flex align-items-start mb-4">
-                  <i class="bi bi-geo-alt me-4 display-6"></i>
+                  <i class="bi bi-cloud-rain me-4 display-6"></i>
                   <div>
-                    <h4 class="m-0 h5 text-white">Keunikan Setiap Desa</h4>
-                    <p class="text-white opacity-50">Temukan keindahan alam, budaya, dan tradisi yang khas dari setiap desa wisata.</p>
+                    <h4 class="m-0 h5 text-white">Plants needs rain</h4>
+                    <p class="text-white opacity-50">Lorem ipsum dolor sit amet.</p>
                   </div>
                 </div>
                 <div class="col-lg-12 d-flex align-items-start mb-4">
-                  <i class="bi bi-people me-4 display-6"></i>
+                  <i class="bi bi-heart me-4 display-6"></i>
                   <div>
-                    <h4 class="m-0 h5 text-white">Pemberdayaan Lokal</h4>
-                    <p class="text-white opacity-50">Semua layanan melibatkan penduduk setempat, mendukung ekonomi desa secara langsung.</p>
+                    <h4 class="m-0 h5 text-white">Love organic foods</h4>
+                    <p class="text-white opacity-50">Lorem ipsum dolor sit amet.</p>
                   </div>
                 </div>
                 <div class="col-lg-12 d-flex align-items-start">
-                  <i class="bi bi-globe me-4 display-6"></i>
+                  <i class="bi bi-shop me-4 display-6"></i>
                   <div>
-                    <h4 class="m-0 h5 text-white">Platform Mudah Digunakan</h4>
-                    <p class="text-white opacity-50">Informasi seperti peta wisata dan rekomendasi aktivitas dapat diakses dengan mudah melalui JejakDesa.</p>
+                    <h4 class="m-0 h5 text-white">Sell vegies</h4>
+                    <p class="text-white opacity-50">Lorem ipsum dolor sit amet.</p>
                   </div>
                 </div>
               </div>
@@ -284,176 +249,14 @@
           </div>
         </div>
       </div>
-    </section>
-    <!-- /About Section -->
-
-    <!-- About 3 Section -->
-    <section id="about-3" class="about-3 section">
-
-      <div class="container">
-        <div class="row gy-4 justify-content-between align-items-center">
-          <div class="col-lg-6 order-lg-2 position-relative" data-aos="zoom-out">
-            <img src="assets/img/img_sq_1.jpg" alt="Image" class="img-fluid">
-            <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox pulsating-play-btn">
-              <span class="play"><i class="bi bi-play-fill"></i></span>
-            </a>
-          </div>
-          <div class="col-lg-5 order-lg-1" data-aos="fade-up" data-aos-delay="100">
-            <h2 class="content-title mb-4">Acara Desa Mendatang</h2>
-            <p class="mb-4">
-                Jangan lewatkan kesempatan untuk berpartisipasi dalam event-event menarik di desa kami. 
-                Rasakan pengalaman tak terlupakan dengan keindahan budaya dan alam lokal yang khas.
-            </p>
-            <ul class="list-unstyled list-check">
-                <li>📅 <strong>Festival Panen Raya</strong> - 20 Desember 2024</li>
-                <li>📅 <strong>Lomba Seni Tradisional</strong> - 5 Januari 2025</li>
-                <li>📅 <strong>Pasar Malam Desa</strong> - 15 Februari 2025</li>
-            </ul>
-
-            <p><a href="#" class="btn-cta">Lihat Semua Event</a></p>
-          </div>
-        </div>
-      </div>
-    </section><!-- /About 3 Section -->
-
-    <!-- Services 2 Section -->
-    <section id="services-2" class="services-2 section dark-background">
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Untuk Anda</h2>
-        <p>Rekomendasi Desa Terbaik</p>
-      </div><!-- End Section Title -->
-
-      <div class="services-carousel-wrap">
-        <div class="container">
-          <div class="swiper init-swiper">
-            <script type="application/json" class="swiper-config">
-              {
-                "loop": true,
-                "speed": 600,
-                "autoplay": {
-                  "delay": 5000
-                },
-                "slidesPerView": "auto",
-                "pagination": {
-                  "el": ".swiper-pagination",
-                  "type": "bullets",
-                  "clickable": true
-                },
-                "navigation": {
-                  "nextEl": ".js-custom-next",
-                  "prevEl": ".js-custom-prev"
-                },
-                "breakpoints": {
-                  "320": {
-                    "slidesPerView": 1,
-                    "spaceBetween": 40
-                  },
-                  "1200": {
-                    "slidesPerView": 3,
-                    "spaceBetween": 40
-                  }
-                }
-              }
-            </script>
-            <button class="navigation-prev js-custom-prev">
-              <i class="bi bi-arrow-left-short"></i>
-            </button>
-            <button class="navigation-next js-custom-next">
-              <i class="bi bi-arrow-right-short"></i>
-            </button>
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="service-item">
-                  <div class="service-item-contents">
-                    <a href="#">
-                      <span class="service-item-category">Raja Ampat</span>
-                      <h2 class="service-item-title">Desa Arborek</h2>
-                    </a>
-                  </div>
-                  <img src="assets/img/img_sq_1.jpg" alt="Image" class="img-fluid">
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="service-item">
-                  <div class="service-item-contents">
-                    <a href="#">
-                      <span class="service-item-category">Gianyar, Bali</span>
-                      <h2 class="service-item-title">Desa Ubud</h2>
-                    </a>
-                  </div>
-                  <img src="assets/img/img_sq_3.jpg" alt="Image" class="img-fluid">
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="service-item">
-                  <div class="service-item-contents">
-                    <a href="#">
-                      <span class="service-item-category">Nusa Tenggara Timur</span>
-                      <h2 class="service-item-title">Desa Wae Rebo</h2>
-                    </a>
-                  </div>
-                  <img src="assets/img/img_sq_8.jpg" alt="Image" class="img-fluid">
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="service-item">
-                  <div class="service-item-contents">
-                    <a href="#">
-                      <span class="service-item-category">Yogyakarta</span>
-                      <h2 class="service-item-title">Desa Pentingsari</h2>
-                    </a>
-                  </div>
-                  <img src="assets/img/img_sq_4.jpg" alt="Image" class="img-fluid">
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="service-item">
-                  <div class="service-item-contents">
-                    <a href="#">
-                      <span class="service-item-category">Bali</span>
-                      <h2 class="service-item-title">Desa Penglipuran</h2>
-                    </a>
-                  </div>
-                  <img src="assets/img/img_sq_5.jpg" alt="Image" class="img-fluid">
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="service-item">
-                  <div class="service-item-contents">
-                    <a href="#">
-                      <span class="service-item-category">Bali</span>
-                      <h2 class="service-item-title">Desa Pemuteran</h2>
-                    </a>
-                  </div>
-                  <img src="assets/img/img_sq_6.jpg" alt="Image" class="img-fluid">
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="service-item">
-                  <div class="service-item-contents">
-                    <a href="#">
-                      <span class="service-item-category">Banyuwangi</span>
-                      <h2 class="service-item-title">Desa Tamansari</h2>
-                    </a>
-                  </div>
-                  <img src="assets/img/img_sq_8.jpg" alt="Image" class="img-fluid">
-                </div>
-              </div>
-            </div>
-            <div class="swiper-pagination"></div>
-          </div>
-        </div>
-      </div>
-    </section><!-- /Services 2 Section -->
+    </section><!-- /About Section -->
 
     <!-- Testimonials Section -->
     <section class="testimonials-12 testimonials section" id="testimonials">
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>TESTIMONI</h2>
-        <p>Dari beberapa pengguna platform kami</p>
+        <h2>TESTIMONIALS</h2>
+        <p>Necessitatibus eius consequatur</p>
       </div><!-- End Section Title -->
 
       <div class="testimonial-wrap">
@@ -464,12 +267,12 @@
                 <img src="assets/img/testimonials/testimonials-1.jpg" alt="Testimonial author">
                 <blockquote>
                   <p>
-                    “Saya sangat terkesan dengan pengalaman saya di Desa Bambu Rindu. 
-                    Suasana alamnya sangat menenangkan dan cocok untuk melepaskan penat.
-                     Selain itu, penduduk lokalnya sangat ramah. Saya pasti akan kembali ke sini!”
+                    “Lorem ipsum dolor sit, amet consectetur adipisicing
+                    elit. Provident deleniti iusto molestias, dolore vel fugiat
+                    ab placeat ea?”
                   </p>
                 </blockquote>
-                <p class="client-name">Ari Pratama, Surabaya</p>
+                <p class="client-name">James Smith</p>
               </div>
             </div>
             <div class="col-md-6 mb-4 mb-md-4">
@@ -477,13 +280,12 @@
                 <img src="assets/img/testimonials/testimonials-2.jpg" alt="Testimonial author">
                 <blockquote>
                   <p>
-                    “JejakDesa memberikan informasi yang sangat berguna 
-                    mengenai desa wisata di berbagai daerah. Saya menemukan 
-                    Desa Air Jernih di Sleman berkat platform ini, 
-                    dan itu menjadi pengalaman liburan terbaik saya!”
+                    “Lorem ipsum dolor sit, amet consectetur adipisicing
+                    elit. Provident deleniti iusto molestias, dolore vel fugiat
+                    ab placeat ea?”
                   </p>
                 </blockquote>
-                <p class="client-name">Siti Nurul, Yogyakarta</p>
+                <p class="client-name">Kate Smith</p>
               </div>
             </div>
             <div class="col-md-6 mb-4 mb-md-4">
@@ -491,13 +293,12 @@
                 <img src="assets/img/testimonials/testimonials-3.jpg" alt="Testimonial author">
                 <blockquote>
                   <p>
-                    “Sebagai pencinta alam, saya selalu mencari tempat wisata 
-                    yang belum banyak diketahui orang. JejakDesa membantu saya 
-                    menemukan tempat-tempat baru yang menakjubkan, 
-                    salah satunya adalah Desa Bambu Rindu. Wajib dikunjungi!”
+                    “Lorem ipsum dolor sit, amet consectetur adipisicing
+                    elit. Provident deleniti iusto molestias, dolore vel fugiat
+                    ab placeat ea?”
                   </p>
                 </blockquote>
-                <p class="client-name">Rina Anggraini, Bali</p>
+                <p class="client-name">Claire Anderson</p>
               </div>
             </div>
             <div class="col-md-6 mb-4 mb-md-4">
@@ -505,13 +306,12 @@
                 <img src="assets/img/testimonials/testimonials-4.jpg" alt="Testimonial author">
                 <blockquote>
                   <p>
-                    “Sangat puas dengan layanan dan informasi yang diberikan oleh JejakDesa. 
-                    Website ini sangat membantu dalam merencanakan perjalanan saya, termasuk 
-                    memberikan info detail 
-                    tentang desa wisata yang jarang diketahui banyak orang”
+                    “Lorem ipsum dolor sit, amet consectetur adipisicing
+                    elit. Provident deleniti iusto molestias, dolore vel fugiat
+                    ab placeat ea?”
                   </p>
                 </blockquote>
-                <p class="client-name">Budi Santoso, Bandung</p>
+                <p class="client-name">Dan Smith</p>
               </div>
             </div>
           </div>
@@ -519,126 +319,36 @@
       </div>
     </section><!-- /Testimonials Section -->
 
-    <!-- Recent Posts Section -->
-    <section id="recent-posts" class="recent-posts section">
+    <!-- Call To Action Section -->
+    <section id="call-to-action" class="call-to-action section light-background">
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Baru - Baru Ini</h2>
-        <p>Desa dan Tempat Wisata Terbaik</p>
-      </div><!-- End Section Title -->
-
-      <div class="container"> 
-        <div class="row gy-5">
-      
-          <!-- Desa Wisata Unggulan 1 -->
-          <div class="col-xl-4 col-md-6">
-            <div class="post-item position-relative h-100" data-aos="fade-up" data-aos-delay="100">
-      
-              <div class="post-img position-relative overflow-hidden">
-                <img src="assets/img/blog/blog-1.jpg" class="img-fluid" alt="Desa Wisata Lembah Hijau">
-                <span class="post-date">Lembah Hijau</span>
-              </div>
-      
-              <div class="post-content d-flex flex-column">
-      
-                <h3 class="post-title">Pesona Keindahan Alam yang Memukau</h3>
-      
-                <div class="meta d-flex align-items-center">
-                  <div class="d-flex align-items-center">
-                    <i class="bi bi-geo-alt"></i> <span class="ps-2">Kabupaten Bandung</span>
-                    <span class="px-3 text-black-50">/</span>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-half text-warning"></i>
-                  </div>
-                </div>
-      
-                <hr>
-      
-                <a href="/wisata/desa-lembah-hijau" class="readmore stretched-link"><span>Selengkapnya</span><i class="bi bi-arrow-right"></i></a>
-      
-              </div>
-      
+      <div class="content">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <h3>Subscribe To Our Newsletter</h3>
+              <p class="opacity-50">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Nesciunt, reprehenderit!
+              </p>
             </div>
-          </div><!-- End post item -->
-      
-          <!-- Desa Wisata Unggulan 2 -->
-          <div class="col-xl-4 col-md-6">
-            <div class="post-item position-relative h-100" data-aos="fade-up" data-aos-delay="200">
-      
-              <div class="post-img position-relative overflow-hidden">
-                <img src="assets/img/blog/blog-2.jpg" class="img-fluid" alt="Desa Wisata Air Jernih">
-                <span class="post-date">Air Jernih</span>
-              </div>
-      
-              <div class="post-content d-flex flex-column">
-      
-                <h3 class="post-title">Nikmati Kejernihan Sungai dan Tradisi Lokal</h3>
-      
-                <div class="meta d-flex align-items-center">
-                  <div class="d-flex align-items-center">
-                    <i class="bi bi-geo-alt"></i> <span class="ps-2">Kabupaten Sleman</span>
-                    <span class="px-3 text-black-50">/</span>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
-                  </div>
+            <div class="col-lg-6">
+              <form action="forms/newsletter.php" class="form-subscribe php-email-form">
+                <div class="form-group d-flex align-items-stretch">
+                  <input type="email" name="email" class="form-control h-100" placeholder="Enter your e-mail">
+                  <input type="submit" class="btn btn-secondary px-4" value="Subcribe">
                 </div>
-      
-                <hr>
-      
-                <a href="/wisata/desa-air-jernih" class="readmore stretched-link"><span>Selengkapnya</span><i class="bi bi-arrow-right"></i></a>
-      
-              </div>
-      
-            </div>
-          </div><!-- End post item -->
-      
-          <!-- Desa Wisata Unggulan 3 -->
-          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="post-item position-relative h-100">
-      
-              <div class="post-img position-relative overflow-hidden">
-                <img src="assets/img/blog/blog-3.jpg" class="img-fluid" alt="Desa Wisata Bambu Rindu">
-                <span class="post-date">Bambu Rindu</span>
-              </div>
-      
-              <div class="post-content d-flex flex-column">
-      
-                <h3 class="post-title">Temukan Ketentraman di Tengah Rindangnya Bambu</h3>
-      
-                <div class="meta d-flex align-items-center">
-                  <div class="d-flex align-items-center">
-                    <i class="bi bi-geo-alt"></i> <span class="ps-2">Kabupaten Malang</span>
-                    <span class="px-3 text-black-50">/</span>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star text-warning"></i>
-                    <i class="bi bi-star text-warning"></i>
-                  </div>
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">
+                  Your subscription request has been sent. Thank you!
                 </div>
-      
-                <hr>
-      
-                <a href="/wisata/desa-bambu-rindu" class="readmore stretched-link"><span>Selengkapnya</span><i class="bi bi-arrow-right"></i></a>
-      
-              </div>
-      
+              </form>
             </div>
-          </div><!-- End post item -->
-      
+          </div>
         </div>
       </div>
-      
-      
-
-    </section><!-- /Recent Posts Section -->
+    </section><!-- /Call To Action Section -->
 
   </main>
 
