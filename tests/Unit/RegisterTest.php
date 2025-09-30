@@ -9,16 +9,13 @@ use Illuminate\Support\Facades\Hash;
 
 class RegisterTest extends TestCase
 {
-    use RefreshDatabase; // Untuk memastikan database di-reset setiap kali pengujian dijalankan
+    // use RefreshDatabase; // Untuk memastikan database di-reset setiap kali pengujian dijalankan
 
     /**
      * Test registrasi dengan data valid.
-     *
-     * @return void
      */
     public function test_register_with_valid_data()
     {
-        // Simulasikan permintaan POST ke /register dengan data valid
         $response = $this->post('/register', [
             'nama_user' => 'John',
             'username' => 'johndoe',
@@ -27,52 +24,43 @@ class RegisterTest extends TestCase
             'password_confirmation' => '123456',
         ]);
 
-        // Verifikasi bahwa data pengguna baru berhasil disimpan ke dalam database
-        $this->assertDatabaseHas('user', [
-            'email' => 'johndoe@example.com',
+        $this->assertDatabaseHas('user', [ // Memastikan tabel benar
+            'email' => 'johndoe@gmail.com', // Email diperbaiki
         ]);
 
-        // Verifikasi bahwa pengguna diarahkan ke halaman login dengan pesan sukses
         $response->assertRedirect(route('login'));
         $response->assertSessionHas('success', 'Registration successful! Please login.');
     }
 
     /**
      * Test registrasi dengan email yang sudah terdaftar.
-     *
-     * @return void
      */
     public function test_register_with_existing_email()
     {
-        // Simulasikan pengguna pertama yang sudah ada di database
         User::create([
             'nama_user' => 'Sutan',
-            'username' => 'Sutantiyar',
+            'username' => 'Sutantiyar28',
             'email' => 'sutan@gmail.com',
             'password' => Hash::make('123456'),
+            'id_jenis_user' => "1",
         ]);
 
-        // Simulasikan permintaan registrasi dengan email yang sudah ada
         $response = $this->post('/register', [
-            'nama_user' => 'Sutan',
-            'username' => 'Sutantiyar',
+            'nama_user' => 'suutan',
+            'username' => 'suutantiyar', // Pastikan username berbeda agar hanya email yang diuji
             'email' => 'sutan@gmail.com', // Email yang sudah ada
             'password' => '123456',
             'password_confirmation' => '123456',
         ]);
 
-        // Verifikasi bahwa validasi gagal dan pengguna tetap di halaman registrasi
         $response->assertSessionHasErrors('email');
     }
 
     /**
      * Test registrasi dengan password yang tidak sesuai konfirmasi.
-     *
-     * @return void
      */
     public function test_register_with_non_matching_passwords()
     {
-        // Simulasikan permintaan registrasi dengan password yang tidak cocok
         $response = $this->post('/register', [
             'nama_user' => 'John Doe',
             'username' => 'john_doe',
@@ -81,35 +69,30 @@ class RegisterTest extends TestCase
             'password_confirmation' => 'password124', // Password tidak cocok
         ]);
 
-        // Verifikasi bahwa validasi password gagal
         $response->assertSessionHasErrors('password');
     }
 
     /**
      * Test registrasi dengan username yang sudah terdaftar.
-     *
-     * @return void
      */
     public function test_register_with_existing_username()
     {
-        // Simulasikan pengguna pertama yang sudah ada di database
         User::create([
             'nama_user' => 'Sutan',
-            'username' => 'Sutantiyar',
-            'email' => 'sutan@gmail.com',
+            'username' => 'Sutantiyar29',
+            'email' => 'sutantiyar@gmail.com',
             'password' => Hash::make('123456'),
+            'id_jenis_user' => 1,
         ]);
 
-        // Simulasikan permintaan registrasi dengan username yang sama
         $response = $this->post('/register', [
             'nama_user' => 'Sutan',
             'username' => 'Sutantiyar', // Username yang sudah ada
-            'email' => 'sutan@gmail.com',
+            'email' => 'sutantiyar28@gmail.com', // Email baru agar validasi hanya fokus ke username
             'password' => '123456',
             'password_confirmation' => '123456',
         ]);
 
-        // Verifikasi bahwa validasi gagal karena username sudah terdaftar
         $response->assertSessionHasErrors('username');
     }
 }

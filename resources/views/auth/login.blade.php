@@ -115,7 +115,7 @@
         }
 
         form .btn {
-            width: 100%;
+            width: 100px;
             padding: 12px;
             border: none;
             border-radius: 5px;
@@ -194,11 +194,21 @@
                     <button class="social-btn google">Go</button>
                     <button class="social-btn linkedin">in</button>
                 </div>
-                <p>OR</p>
+                <p>ATAU</p>
                 <form method="POST" action="{{ route('login') }}">
                     @csrf
                     <input type="email" placeholder="Email" name="email" required>
+                    @if ($errors->has('email'))
+                        <div style="color: red; font-size: 14px;">
+                            {{ $errors->first('email') }}
+                        </div>
+                    @endif
                     <input type="password" placeholder="Password" name="password" required>
+                    @if ($errors->has('password'))
+                        <div style="color: red; font-size: 14px;">
+                            {{ $errors->first('password') }}
+                        </div>
+                    @endif
                     <button type="submit" class="btn">Masuk</button>
                 </form>
             </div>

@@ -7,7 +7,7 @@
 
     <nav id="navmenu" class="navmenu">
       <ul>
-        <li><a href="{{ url('/') }}" class="active">Beranda</a></li>
+        <li><a href="{{ url('/dashboard') }}" class="active">Beranda</a></li>
         <li class="dropdown"><a href="#"><span>Desa Wisata</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
           <ul>
             <li><a href="{{ url('/peta') }}">Peta Desa</a></li>
@@ -26,7 +26,7 @@
         </li>
         <li class="dropdown"><a href="#"><span>Akun Saya</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
           <ul>
-            <li><a href="#">Profil</a></li>
+            <li><a href="{{ route('profile') }}">Profil</a></li>
             <li><a href="#">Reservasi Saya</a></li>
             <li><a href="#">Favorit</a></li>
             <!-- Tambahkan Tombol Logout di sini -->

@@ -16,19 +16,33 @@ class LoginController extends Controller
     }
     
 
-    public function login(Request $request)
-    {
-        $request->validate([
-            'email' => 'required|email',
-            'password' => 'required|min:6',
-        ]);
+public function login(Request $request)
+{
+    // Validasi data input dari pengguna
+    $request->validate([
+        'email' => 'required|email',
+        'password' => 'required|min:6',
+    ]);
 
-        if (Auth::attempt($request->only('email', 'password'))) {
-            return redirect()->route('dashboard');
+    // Cek apakah autentikasi berhasil
+    if (Auth::attempt($request->only('email', 'password'))) {
+        // Ambil user yang terautentikasi
+        $user = auth()->user();
+
+        // Periksa apakah user adalah admin (id_jenis_user = '1')
+        if ($user->id_jenis_user == '1') {  // Pastikan nilai adalah string '1'
+            return redirect()->route('admin.dashboard');  // Arahkan ke dashboard admin
         }
 
-        return back()->withErrors(['email' => 'Invalid credentials.']);
+        // Jika bukan admin, arahkan ke halaman umum atau home
+        return redirect()->route('home');
     }
+
+    // Jika login gagal, kembali ke halaman login dengan pesan error
+    return back()->withErrors([
+        'password' => 'Password salah atau email tidak terdaftar.',
+    ]);
+}
 
     public function logout()
     {
@@ -51,8 +65,11 @@ class LoginController extends Controller
                 'username' => 'required|string|max:255|unique:user', // Validasi username
                 'email' => 'required|email|unique:user', // Validasi email
                 'password' => 'required|min:6|confirmed', // Validasi password
+            ], [
+                // Custom error messages
+                'password.min' => 'Password harus terdiri dari minimal 6 karakter.',  // Menambahkan pesan khusus untuk password
             ]);
-    
+            
             // Menyimpan data pengguna baru ke dalam database
             User::create([
                 'nama_user' => $request->nama_user,  // Menggunakan 'nama_user'
@@ -61,7 +78,7 @@ class LoginController extends Controller
                 'password' => Hash::make($request->password), // Enkripsi password
                 'id_jenis_user' => $request->id_jenis_user ?? '1', // Menambahkan nilai default '1' jika tidak ada input untuk id_jenis_user
             ]);
-    
+        
             // Redirect ke halaman login setelah berhasil registrasi
             return redirect()->route('login')->with('success', 'Registration successful! Please login.');
         }
